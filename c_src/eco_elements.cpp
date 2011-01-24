@@ -23,7 +23,9 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 // eco_elements.cpp
+#include <stdlib.h>
 #include <iostream>
+#include <string.h>
 #include "eco_elements.h"
 #include "ec_protocol.h"
 

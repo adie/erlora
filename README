@@ -1,2 +1,24 @@
-This project implements C++ OCCI port program for enabling Erlang 
+This project implements C++ OCCI port program for enabling Erlang
 communications with Oracle database server.
+
+To get started you need to properly set ERLHOME and OCCIHOME in
+`c_src/Makefile` and lib versions in `priv/ora.rel` (if you run `make`,
+erlc will tell you what versions you have).
+
+Run `make`. If all went ok you should have `priv/oraserver` executable
+and `ebin/ora.boot` script.
+
+To try it out, run
+
+`erl -pa ../erlora/ebin`
+
+and in erlang shell execute
+
+1> application:start(ora).
+ok
+2> {ok, Pid} = ora:connect("user/password@hostname/sid", []).
+{ok,<0.39.0>}
+
+and then you should be able to execute any functions of `ora` module passing
+obtained `Pid`.
+

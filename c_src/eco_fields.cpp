@@ -23,6 +23,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
 // eco_fields.cpp
+#include <stdlib.h>
 #include <iostream>
 #include "eco_fields.h"
 #include "ec_protocol.h"

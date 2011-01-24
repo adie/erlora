@@ -2,12 +2,12 @@ include ../include.mk
 
 CC = g++
 
-ERLHOME = /opt/erlang/R11B-0/lib/erlang/lib/erl_interface-3.5.5
-OCCIHOME = /home/oracle/Client-10.2.0
+ERLHOME = /usr/local/lib/erlang/lib/erl_interface-3.7.1
+OCCIHOME = /home/adie/instant_client
 
 INCPATH = -I. -I$(ERLHOME)/include -I$(OCCIHOME)/rdbms/public
 LIBPATH = -L$(ERLHOME)/lib -L$(OCCIHOME)/lib
-LIBS = -locci -lclntsh -lnnz10 -lerl_interface -lei -lpthread
+LIBS = -locci -lclntsh -lnnz11 -lerl_interface -lei -lpthread
 CFLAGS = -g
 
 OBJS = eco_main.o eco_marshal.o eco_proc.o eco_rows.o eco_fields.o eco_elements.o eco_conv.o eco_error.o

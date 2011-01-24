@@ -373,7 +373,7 @@ init([Args]) ->
                      undefined -> false
                      end,
 
-        Priv = case code:priv_dir(ora) of
+        Priv = case code:priv_dir(erlora) of
                L when is_list(L) ->
                    L;
                {error, bad_name} ->
